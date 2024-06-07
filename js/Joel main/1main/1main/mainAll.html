@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="header">text</h1>
+    <script>
+   
+        let odi = 21;
+    
+        console.log(typeof odi);
+
+        document.getElementById("header").innerHTML = odi;
+
+
+
+        //types that can given to let 
+
+        // let a = 5;
+        // let _f = 3;
+        // let $4 = 4
+
+        let m = 10;
+        m=60;
+        
+        console.log(m)
+
+        function myFunc(){
+            let joel = 5;
+            console.log(joel);
+            return joel;
+        }
+        console.log(myFunc())
+        myFunc();
+
+
+
+
+
+        // parameter passing
+
+        function myFunct(valuea)
+        {
+            let a =10;
+            let b = valuea;
+            let c = a+b;
+            return c;
+        }        
+
+        console.log(myFunct(10))        /*value passing*/
+
+
+
+        //  objects
+
+
+        let user = {
+            firstName: "joel",
+            lastName: "francis"
+        };
+        console.log(user?.firstName);
+        console.log(user?.lastName);
+
+
+
+
+    
+
+
+            let person={
+                name:"Joel Francis",
+                place:"Ernakulam",
+                age:"18"
+            }
+            
+            console.log(person);
+        
+            let ambition = "fullstack developer"
+          
+
+            console.log(ambition)
+            // alert("you are fired");
+            document.write("<h1>hello joel</h1>");
+
+
+
+            // eventlistner.
+
+            
+            function onAlert(){
+                alert("you have clicked the button");
+            }
+            
+    </script>
+ 
+    <button onClick="onAlert()">  Click   </button>
+</body>
+
+</html>

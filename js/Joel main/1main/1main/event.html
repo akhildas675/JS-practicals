@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        min-width: 100px;
+        min-height: 100px;
+        padding: 30px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="btn">grand father<div id="bt">father<div id="b">child</div></div></div>
+
+    <script>
+//event bubbling
+
+        document.querySelector("#btn").addEventListener(
+          "click",
+          function () {
+            console.log("Grand parent Hello World!");
+          },
+          false
+        );
+
+        document.querySelector("#bt").addEventListener(
+          "click",
+          () => {
+            console.log("Fahter hello world");
+          },
+          false
+        );
+        document.querySelector("#b").addEventListener(
+          "click",
+          () => {
+            console.log("Child hello world");
+          },
+          false
+        );
+
+//event capturing
+
+      // document.querySelector("#btn").addEventListener(
+      //   "click",
+      //   function () {
+      //     console.log("Grand parent Hello World!");
+      //   },
+      //   true
+      // );
+
+      // document.querySelector("#bt").addEventListener(
+      //   "click",
+      //   () => {
+      //     console.log("Fahter hello world");
+      //   },
+      //   true
+      // );
+      // document.querySelector("#b").addEventListener(
+      //   "click",
+      //   () => {
+      //     console.log("Child hello world");
+      //   },
+      //   true
+      // );
+
+
+    </script>
+  </body>
+</html>

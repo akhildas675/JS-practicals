@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Button Example</title>
+</head>
+<body>
+<input type="radio" name="color" value='red' id="redRadio">
+<label for="redRadio">Red</label>
+
+
+<div id="colorDisplay">Selected color will be displayed here</div>
+
+<script>
+var radios = document.getElementsByName("color");
+for (var i = 0; i < radios.length; i++) {
+    radios[i].addEventListener("change", function() {
+        document.getElementById("colorDisplay").textContent = "Selected color: " + this.value;
+    });
+}
+</script>
+</body>
+</html>

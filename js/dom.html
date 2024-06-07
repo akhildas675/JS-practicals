@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><p id="change">Edit this word</p></h1>
+
+    <button id="toggleButton">Togglebutton</button>
+    
+
+    <div>
+        <input type="radio" name="color" value="red"  id="redRadio">
+        <label for="redRadio">Red</label><br> 
+        <input type="radio" name="color" value="green" id="greenRadio">
+        <label for="greenRadio">Green</label><br> 
+        
+    </div>
+
+<div id="colorDisplay">
+    <p>selected color</p>
+</div>
+    
+
+    <script>
+        let change=document.getElementById('change');
+        change.textContent='The output changed'
+
+        document.getElementById("toggleButton").addEventListener("click",function (){
+            var button=document.getElementById('toggleButton');
+            if(button.textContent==="On"){
+                button.textContent="Off"
+                button.style.backgroundColor="red"
+            }else{
+                button.textContent="On"
+                button.style.backgroundColor="green"
+            }
+        })
+
+        var radios=document.getElementById("color");
+        for(let i=0;i<radios.length;i++){
+            radios[i].addEventListener("change",function (){
+                document.getElementById("colorDisplay").textContent='selectedColor'+ this.value;
+            })
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
